@@ -1,0 +1,24 @@
+# 🧠 AgentAutogen – Multi-Agent Java Code Generator
+
+This project demonstrates a **multi-agent reasoning pipeline** that takes a vague feature request (e.g., _"Add JWT login"_) and turns it into:
+
+1. A structured product requirement (PM)
+2. A software architecture design (Architect)
+3. Working Java code and `pom.xml` (Coder)
+4. A final review report (Reviewer)
+
+It uses **LLaMA 3.x via Ollama** and runs fully **locally** – no OpenAI API key required!
+
+---
+
+## 🚀 One-Click Usage (macOS)
+
+> 🧪 Requirements:
+> - Python 3.10+
+> - [Ollama](https://ollama.com/download) with a model installed (e.g., `llama3`)
+> - Bash / Terminal on macOS
+
+### 🔧 Setup + Run (Single Step)
+
+```bash
+./runmac.sh
