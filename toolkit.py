@@ -21,6 +21,7 @@ import json, re, sys, datetime, subprocess
 from pathlib import Path
 from typing import Iterable
 
+
 # ---------------------------------------------------------------------------
 # Phase‑1 – generate the conversation (delegates to the original runner)
 # ---------------------------------------------------------------------------
@@ -35,7 +36,7 @@ class InteractionRunner:
         We DON'T care about its exit code – even a failure leaves a complete run_*.log.
         """
         script   = Path(__file__).with_name("multi_agent_boilerplate_poc.py")
-        cmd      = [sys.executable, str(script), "run", feature]
+        cmd = [sys.executable, str(script), "run", f'"{feature}"']
 
         print("[runner] launching:", " ".join(cmd))
         # --------- just drop 'check=True' -------------

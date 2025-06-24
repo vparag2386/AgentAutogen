@@ -149,7 +149,11 @@ def phase_run(feature: str):
     gc  = GroupChat(agents=agents, max_round=12, speaker_selection_method="round_robin", send_introductions=False)
     mgr = GroupChatManager(gc, llm_config=LLM)
 
-    result = user.initiate_chat(mgr, f"We need a new feature: {feature}. Collaborate and output boilerplate.")
+    result = user.initiate_chat(
+        mgr,
+        message=f"We need a new feature: {feature}. Collaborate & output boilerplate code.",
+        clear_history=True
+    )
 
     # echo conversation
     print("\n========== CONVERSATION ==========")
